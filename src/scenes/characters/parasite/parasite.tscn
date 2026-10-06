@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dnbgbu2ern4vb"]
+
+[ext_resource type="Script" uid="uid://3xf8wd54yi76" path="res://scenes/characters/parasite/parasite.gd" id="1_ywyf0"]
+[ext_resource type="PackedScene" uid="uid://dpulhxo0kl3h" path="res://scenes/components/interactor_component.tscn" id="2_3px0q"]
+[ext_resource type="Texture2D" uid="uid://faeg5ps1i226" path="res://assets/icon.svg" id="2_ul2j1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46w7f"]
+
+[node name="Parasite" type="CharacterBody2D" unique_id=1342676814]
+collision_layer = 2
+script = ExtResource("1_ywyf0")
+
+[node name="InteractorComponent" parent="." unique_id=1168251629 instance=ExtResource("2_3px0q")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1572625013]
+shape = SubResource("RectangleShape2D_46w7f")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=575974172]
+position = Vector2(-0.5, -1.0000019)
+scale = Vector2(0.16406249, 0.15624999)
+texture = ExtResource("2_ul2j1")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2106198248]
+offset = Vector2(0, -100)
+position_smoothing_enabled = true

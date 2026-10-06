@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cs28pf4yfihp1"]
+
+[ext_resource type="Texture2D" uid="uid://faeg5ps1i226" path="res://assets/icon.svg" id="1_tsias"]
+[ext_resource type="PackedScene" uid="uid://dnbgbu2ern4vb" path="res://scenes/characters/parasite/parasite.tscn" id="2_7k8c1"]
+[ext_resource type="PackedScene" uid="uid://b77ip64sgqyc0" path="res://scenes/characters/hosts/host.tscn" id="3_lfyvx"]
+[ext_resource type="PackedScene" uid="uid://72uqima55844" path="res://scenes/levels/level_1.tscn" id="4_w2p53"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46w7f"]
+size = Vector2(1188, 23)
+
+[node name="World" type="Node2D" unique_id=1798337511]
+
+[node name="Level1" parent="." unique_id=1909810422 instance=ExtResource("4_w2p53")]
+
+[node name="RigidBody2D" type="StaticBody2D" parent="." unique_id=1923151387]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1023912192]
+position = Vector2(365, 336)
+shape = SubResource("RectangleShape2D_46w7f")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1384052064]
+position = Vector2(357, 330.50003)
+scale = Vector2(9.21875, 0.2890625)
+texture = ExtResource("1_tsias")
+
+[node name="Parasite" parent="." unique_id=1342676814 instance=ExtResource("2_7k8c1")]
+position = Vector2(231, 264)
+
+[node name="Host" parent="." unique_id=1525804536 instance=ExtResource("3_lfyvx")]
+position = Vector2(349, 272)
+
+[node name="Host2" parent="." unique_id=406604199 instance=ExtResource("3_lfyvx")]
+position = Vector2(416, 267)
+
+[node name="Host3" parent="." unique_id=1226556912 instance=ExtResource("3_lfyvx")]
+position = Vector2(306, 268)

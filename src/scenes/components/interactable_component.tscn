@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cy5446qbvkfvf"]
+
+[ext_resource type="Script" uid="uid://twcdgm636mst" path="res://scenes/components/interactable_component.gd" id="1_b7aem"]
+[ext_resource type="Texture2D" uid="uid://cs2qmy0ah8014" path="res://assets/ui/key_e.tres" id="1_onphe"]
+
+[node name="InteractableComponent" type="Node2D" unique_id=2036713416 groups=["interactable"]]
+script = ExtResource("1_b7aem")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1549141649]
+texture = ExtResource("1_onphe")
