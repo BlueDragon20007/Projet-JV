@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://faeg5ps1i226" path="res://assets/icon.svg" id="1_tsias"]
 [ext_resource type="PackedScene" uid="uid://dnbgbu2ern4vb" path="res://scenes/characters/parasite/parasite.tscn" id="2_7k8c1"]
-[ext_resource type="PackedScene" uid="uid://b77ip64sgqyc0" path="res://scenes/characters/hosts/host.tscn" id="3_lfyvx"]
+[ext_resource type="PackedScene" uid="uid://dixp8v7cruhka" path="res://scenes/characters/hosts/host_civilian.tscn" id="4_7xgas"]
 [ext_resource type="PackedScene" uid="uid://72uqima55844" path="res://scenes/levels/level_1.tscn" id="4_w2p53"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46w7f"]
@@ -26,11 +26,32 @@ texture = ExtResource("1_tsias")
 [node name="Parasite" parent="." unique_id=1342676814 instance=ExtResource("2_7k8c1")]
 position = Vector2(231, 264)
 
-[node name="Host" parent="." unique_id=1525804536 instance=ExtResource("3_lfyvx")]
-position = Vector2(349, 272)
+[node name="HostCivilian" parent="." unique_id=1525804536 instance=ExtResource("4_7xgas")]
+position = Vector2(289, 277)
 
-[node name="Host2" parent="." unique_id=406604199 instance=ExtResource("3_lfyvx")]
-position = Vector2(416, 267)
+[node name="HostCivilian2" parent="." unique_id=2043996825 instance=ExtResource("4_7xgas")]
+position = Vector2(355, 273)
 
-[node name="Host3" parent="." unique_id=1226556912 instance=ExtResource("3_lfyvx")]
-position = Vector2(306, 268)
+[node name="HostCivilian3" parent="." unique_id=57661743 instance=ExtResource("4_7xgas")]
+position = Vector2(436, 274)
+
+[node name="HostCivilian4" parent="." unique_id=1276776096 instance=ExtResource("4_7xgas")]
+position = Vector2(459, 272)
+
+[node name="HostCivilian5" parent="." unique_id=1519967330 instance=ExtResource("4_7xgas")]
+position = Vector2(508, 275)
+
+[node name="HostCivilian6" parent="." unique_id=1934708111 instance=ExtResource("4_7xgas")]
+position = Vector2(402, 274)
+
+[node name="HostCivilian7" parent="." unique_id=368476047 instance=ExtResource("4_7xgas")]
+position = Vector2(260, 269)
+
+[node name="HostCivilian8" parent="." unique_id=84118084 instance=ExtResource("4_7xgas")]
+position = Vector2(186, 274)
+
+[node name="HostCivilian9" parent="." unique_id=1813451741 instance=ExtResource("4_7xgas")]
+position = Vector2(140, 268)
+
+[node name="HostCivilian10" parent="." unique_id=1689407066 instance=ExtResource("4_7xgas")]
+position = Vector2(67, 270)

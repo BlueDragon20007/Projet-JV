@@ -1,71 +1,36 @@
+class_name Host
 extends CharacterBody2D
 
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var sprite: Sprite2D = $Sprite2D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
 @onready var interactable_component: Node2D = $InteractableComponent
-
-enum State {
-	IDLE,
-	WALK,
-	POSSESSED
-}
-
-var current_state: State
+@onready var state_machine: Node = $StateMachine
 
 const SPEED = 30.0
 const POSSESSED_SPEED = 60.0
 const JUMP_VELOCITY = -300.0
 
 func _ready():
-	change_state(State.WALK)
-	interactable_component.interact.connect(_interacted)
+	interactable_component.interact.connect(_on_interacted)
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	
-	match current_state:
-		State.IDLE:
-			idle()
-		State.WALK:
-			walk()
-		State.POSSESSED:
-			possessed()
-			
-	animate_player()
-
-func change_state(new_state: State):
-	current_state = new_state
-	
-func animate_player():
-	if velocity.x != 0:
-		animated_sprite_2d.play("walk")
-		animated_sprite_2d.flip_h = velocity.x < 0
-	else:
-		animated_sprite_2d.play("idle")
-
-func idle():
-	velocity.x = 0
-	move_and_slide()
-	
-	
-func walk():
-	velocity.x = SPEED
-	move_and_slide()
-
-func possessed():
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * POSSESSED_SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, POSSESSED_SPEED)
-	move_and_slide()
 		
-func _interacted():
-	interactable_component.activated = false
-	change_state(State.POSSESSED)
+	update_facing_direction()
 	
-func leave_control():
-	change_state(State.WALK)
+	move_and_slide()
+	
+func update_facing_direction() -> void:
+	if velocity.x > 0:
+		sprite.scale.x = abs(sprite.scale.x)
+	elif velocity.x < 0:
+		sprite.scale.x = -abs(sprite.scale.x)
+
+func _on_interacted() -> void:
+	state_machine.on_child_transition(state_machine.current_state, "possessed")
+
+func leave_control() -> void:
 	interactable_component.activated = true
+	state_machine.on_child_transition(state_machine.current_state, "idle")

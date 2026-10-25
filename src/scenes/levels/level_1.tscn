@@ -16,27 +16,37 @@
 scroll_scale = Vector2(0.1, 0)
 repeat_size = Vector2(1024, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax/Parallax2D" unique_id=423324058]
+[node name="TextureRect" type="TextureRect" parent="Background/Parallax/Parallax2D" unique_id=1777534750]
+offset_right = 1024.0
+offset_bottom = 360.0
 texture = ExtResource("1_nsrm0")
-centered = false
+expand_mode = 1
+stretch_mode = 6
 
 [node name="Parallax2D2" type="Parallax2D" parent="Background/Parallax" unique_id=1486850495]
 scroll_scale = Vector2(0.4, 0)
-repeat_size = Vector2(1024, 0)
+repeat_size = Vector2(1514, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax/Parallax2D2" unique_id=1699933015]
-position = Vector2(0, 14)
+[node name="TextureRect" type="TextureRect" parent="Background/Parallax/Parallax2D2" unique_id=2052781070]
+offset_top = -152.0
+offset_right = 1514.0
+offset_bottom = 360.0
 texture = ExtResource("2_x42e6")
-centered = false
+expand_mode = 1
+stretch_mode = 6
 
 [node name="Parallax2D3" type="Parallax2D" parent="Background/Parallax" unique_id=285289037]
 scroll_scale = Vector2(0.5, 0)
-repeat_size = Vector2(1024, 0)
+repeat_size = Vector2(1514, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax/Parallax2D3" unique_id=1165908444]
-position = Vector2(0, 14)
+[node name="TextureRect" type="TextureRect" parent="Background/Parallax/Parallax2D3" unique_id=611056725]
+offset_top = -152.0
+offset_right = 1514.0
+offset_bottom = 360.0
 texture = ExtResource("3_6761a")
-centered = false
+expand_mode = 1
+stretch_mode = 6
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Background" unique_id=710382788]
+visible = false
 tile_set = SubResource("TileSet_46w7f")
