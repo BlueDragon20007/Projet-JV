@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
 @onready var interactor_component: Node2D = $InteractorComponent
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var sprite: Sprite2D = $Body
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
 const SPEED = 100.0
@@ -18,11 +19,23 @@ var current_host = null
 
 func _ready():
 	interactor_component.interact.connect(_interacted)
+	animation_player.play("idle")
 
 func _physics_process(delta: float) -> void:
 	manage_movement(delta)
+	update_facing_direction()
+	if velocity.x == 0:
+		animation_player.play("idle")
+	else:
+		animation_player.play("run")
 	if Input.is_action_just_pressed("exit"):
 		leave_host()
+		
+func update_facing_direction() -> void:
+	if velocity.x > 0:
+		sprite.scale.x = abs(sprite.scale.x)
+	elif velocity.x < 0:
+		sprite.scale.x = -abs(sprite.scale.x)
 	
 func manage_movement(delta: float):
 	if current_host:

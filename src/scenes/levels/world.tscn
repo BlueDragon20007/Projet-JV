@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dnbgbu2ern4vb" path="res://scenes/characters/parasite/parasite.tscn" id="2_7k8c1"]
 [ext_resource type="PackedScene" uid="uid://dixp8v7cruhka" path="res://scenes/characters/hosts/host_civilian.tscn" id="4_7xgas"]
 [ext_resource type="PackedScene" uid="uid://72uqima55844" path="res://scenes/levels/level_1.tscn" id="4_w2p53"]
+[ext_resource type="PackedScene" uid="uid://byhja65extxgh" path="res://scenes/menus/pause_menu.tscn" id="5_7xgas"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46w7f"]
 size = Vector2(1188, 23)
@@ -55,3 +56,5 @@ position = Vector2(140, 268)
 
 [node name="HostCivilian10" parent="." unique_id=1689407066 instance=ExtResource("4_7xgas")]
 position = Vector2(67, 270)
+
+[node name="PauseMenu" parent="." unique_id=347215819 instance=ExtResource("5_7xgas")]

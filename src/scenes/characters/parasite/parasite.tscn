@@ -2,9 +2,139 @@
 
 [ext_resource type="Script" uid="uid://3xf8wd54yi76" path="res://scenes/characters/parasite/parasite.gd" id="1_ywyf0"]
 [ext_resource type="PackedScene" uid="uid://dpulhxo0kl3h" path="res://scenes/components/interactor_component.tscn" id="2_3px0q"]
-[ext_resource type="Texture2D" uid="uid://faeg5ps1i226" path="res://assets/icon.svg" id="2_ul2j1"]
+[ext_resource type="Texture2D" uid="uid://bk8qifnhs5vii" path="res://assets/characters/parasite_parts/parasite_body.png" id="3_3px0q"]
+[ext_resource type="Texture2D" uid="uid://bosdpgt6es66" path="res://assets/characters/parasite_parts/parasite_leg.png" id="4_783am"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46w7f"]
+
+[sub_resource type="Animation" id="Animation_3px0q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/BackLeg:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.06632251]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/FrontLeg:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.6318092]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_5l4j1"]
+resource_name = "idle"
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.06981317007977318]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/BackLeg:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.2617993877991494, 0.029670598]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body/FrontLeg:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.6108652381980153, -0.4660029]
+}
+
+[sub_resource type="Animation" id="Animation_783am"]
+resource_name = "run"
+length = 0.5
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/BackLeg:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.429351, 0.5934119, 0.09773844, -0.5637413, 0.09773844]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/FrontLeg:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-1.1274827, -1.293289, -0.6318092, -0.13613568, -0.96342176]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.099999994, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.17453292519943295, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5l4j1"]
+_data = {
+&"RESET": SubResource("Animation_3px0q"),
+&"idle": SubResource("Animation_5l4j1"),
+&"run": SubResource("Animation_783am")
+}
 
 [node name="Parasite" type="CharacterBody2D" unique_id=1342676814]
 collision_layer = 2
@@ -13,13 +143,31 @@ script = ExtResource("1_ywyf0")
 [node name="InteractorComponent" parent="." unique_id=1168251629 instance=ExtResource("2_3px0q")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1572625013]
+visible = false
 shape = SubResource("RectangleShape2D_46w7f")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=575974172]
+[node name="Body" type="Sprite2D" parent="." unique_id=575974172]
 position = Vector2(-0.5, -1.0000019)
-scale = Vector2(0.16406249, 0.15624999)
-texture = ExtResource("2_ul2j1")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_3px0q")
+
+[node name="BackLeg" type="Sprite2D" parent="Body" unique_id=1672974266]
+position = Vector2(-14.999999, 10.000006)
+rotation = -0.06632251
+texture = ExtResource("4_783am")
+centered = false
+offset = Vector2(-40, -18)
+
+[node name="FrontLeg" type="Sprite2D" parent="Body" unique_id=1513501170]
+position = Vector2(5, 6.6666727)
+rotation = -0.6318092
+texture = ExtResource("4_783am")
+centered = false
+offset = Vector2(-40, -18)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2106198248]
 offset = Vector2(0, -100)
 position_smoothing_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1320304614]
+libraries/ = SubResource("AnimationLibrary_5l4j1")
