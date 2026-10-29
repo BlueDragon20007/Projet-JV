@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://npu6xh4x7n2w"]
+
+[ext_resource type="Script" uid="uid://csnk2jch42yb5" path="res://scenes/menus/main_menu.gd" id="1_ovrgc"]
+[ext_resource type="Texture2D" uid="uid://faeg5ps1i226" path="res://assets/icon.svg" id="1_xqga4"]
+[ext_resource type="PackedScene" uid="uid://gbtuwdkk5m1t" path="res://scenes/menus/options_menu.tscn" id="3_2o76q"]
+
+[node name="MainMenu" type="Control" unique_id=765374334]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ovrgc")
+
+[node name="Background" type="TextureRect" parent="." unique_id=9119211]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xqga4")
+expand_mode = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=724610632]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=230397342]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1671756759]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1218057821]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Jouer"
+
+[node name="OptionsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1567402972]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2144386892]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quitter"
+
+[node name="OptionsMenu" parent="." unique_id=1822712464 instance=ExtResource("3_2o76q")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
