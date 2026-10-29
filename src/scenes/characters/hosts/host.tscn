@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b77ip64sgqyc0"]
 
 [ext_resource type="Script" uid="uid://crgw38me4x3gq" path="res://scenes/characters/hosts/host.gd" id="1_sspma"]
-[ext_resource type="Texture2D" path="res://assets/characters/civil_man.png" id="2_ai2vf"]
+[ext_resource type="Texture2D" uid="uid://co6d8foo3xfxr" path="res://assets/characters/civilian_man.png" id="2_exyhk"]
 [ext_resource type="PackedScene" uid="uid://cy5446qbvkfvf" path="res://scenes/components/interactable_component.tscn" id="3_oxciu"]
 [ext_resource type="Script" uid="uid://dt5hbf5ym0mmx" path="res://scripts/state_machine/state_machine.gd" id="4_n2eij"]
 [ext_resource type="Script" uid="uid://ck53clmncb3lf" path="res://scripts/state_machine/npc/host_idle.gd" id="5_exyhk"]
@@ -41,7 +41,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_exyhk"]
 resource_name = "jump"
-length = 0.39999999999999997
+length = 0.4
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -90,7 +90,7 @@ collision_layer = 2
 script = ExtResource("1_sspma")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1666310450]
-texture = ExtResource("2_ai2vf")
+texture = ExtResource("2_exyhk")
 hframes = 13
 vframes = 54
 frame = 325

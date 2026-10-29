@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://co6d8foo3xfxr"
-path="res://.godot/imported/civilian_man.png-58908380d416ca3adea0445b183be4fd.ctex"
+uid="uid://otxew04tbfhl"
+path="res://.godot/imported/civilian_woman_loose.png-7b07e5e6d072562478bcc86c7148d383.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/civilian_man.png"
-dest_files=["res://.godot/imported/civilian_man.png-58908380d416ca3adea0445b183be4fd.ctex"]
+source_file="res://assets/characters/pnj/civilian_woman_loose.png"
+dest_files=["res://.godot/imported/civilian_woman_loose.png-7b07e5e6d072562478bcc86c7148d383.ctex"]
 
 [params]
 

@@ -30,6 +30,7 @@ extends Host
 ]
 
 func _ready() -> void:
+	randomize()
 	super()
 	apply_random_skin()
 	apply_random_colors()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://utuy0f030u1q"
-path="res://.godot/imported/character-spritesheet.png-d859f2bd46a9043906eb89c1ecdff252.ctex"
+uid="uid://co6d8foo3xfxr"
+path="res://.godot/imported/civilian_man.png-5721caf08a938619f270ddd34e142118.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/character-spritesheet.png"
-dest_files=["res://.godot/imported/character-spritesheet.png-d859f2bd46a9043906eb89c1ecdff252.ctex"]
+source_file="res://assets/characters/pnj/civilian_man.png"
+dest_files=["res://.godot/imported/civilian_man.png-5721caf08a938619f270ddd34e142118.ctex"]
 
 [params]
 
