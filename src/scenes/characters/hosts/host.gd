@@ -7,6 +7,8 @@ extends CharacterBody2D
 @onready var interactable_component: Node2D = $InteractableComponent
 @onready var state_machine: Node = $StateMachine
 
+@export var role: String = ""
+
 const SPEED = 30.0
 const POSSESSED_SPEED = 60.0
 const JUMP_VELOCITY = -300.0
@@ -28,7 +30,7 @@ func update_facing_direction() -> void:
 	elif velocity.x < 0:
 		sprite.scale.x = -abs(sprite.scale.x)
 
-func _on_interacted() -> void:
+func _on_interacted(interactor) -> void:
 	state_machine.on_child_transition(state_machine.current_state, "possessed")
 
 func leave_control() -> void:

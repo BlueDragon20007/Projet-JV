@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://b77ip64sgqyc0" path="res://scenes/characters/hosts/host.tscn" id="1_g5u8u"]
 [ext_resource type="Script" uid="uid://bxocubf3qg6yr" path="res://scenes/characters/hosts/host_civilian.gd" id="2_qd0pk"]
 [ext_resource type="Texture2D" uid="uid://co6d8foo3xfxr" path="res://assets/characters/pnj/civilian_man.png" id="3_s6n5b"]
-[ext_resource type="Texture2D" path="res://assets/characters/civilian_woman.png" id="4_iide7"]
 [ext_resource type="Texture2D" uid="uid://bvl4eax1kvs22" path="res://assets/characters/pnj/civilian_woman.png" id="4_y0ts1"]
 [ext_resource type="Texture2D" uid="uid://1c5th23i47b3" path="res://assets/characters/pnj/civilian_man_messy.png" id="5_ai6fw"]
 [ext_resource type="Shader" uid="uid://dhiafw1hmm3kr" path="res://shaders/recolor.gdshader" id="5_d4iat"]
@@ -26,10 +25,10 @@ civilian_skins = Array[Texture2D]([ExtResource("3_s6n5b"), ExtResource("4_y0ts1"
 hair_colors = Array[Color]([Color(0.17254902, 0.105882354, 0.09411765, 1), Color(0.3529412, 0.21960784, 0.14509805, 1), Color(0.63529414, 0.42352942, 0.2784314, 1), Color(0.84705883, 0.6392157, 0.3647059, 1), Color(0.65882355, 0.2627451, 0.13725491, 1), Color(0.8627451, 0.8666667, 0.88235295, 1)])
 shirt_colors = Array[Color]([Color(0.90588236, 0.29803923, 0.23529412, 1), Color(0.20392157, 0.59607846, 0.85882354, 1), Color(0.18039216, 0.8, 0.44313726, 1), Color(0.60784316, 0.34901962, 0.7137255, 1), Color(0.9019608, 0.49411765, 0.13333334, 1), Color(0.94509804, 0.76862746, 0.05882353, 1)])
 pants_colors = Array[Color]([Color(0.17254902, 0.24313726, 0.3137255, 1), Color(0.49803922, 0.54901963, 0.5529412, 1), Color(0.08627451, 0.627451, 0.52156866, 1), Color(0.5568628, 0.26666668, 0.6784314, 1), Color(0.20392157, 0.28627452, 0.36862746, 1)])
+role = "civilian"
 
 [node name="Sprite2D" parent="." index="0" unique_id=1666310450]
 material = SubResource("ShaderMaterial_exyhk")
-texture = ExtResource("4_iide7")
 
 [node name="CollisionShape2D" parent="." index="2" unique_id=1870755748]
 visible = false

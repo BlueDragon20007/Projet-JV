@@ -68,8 +68,9 @@ func leave_host():
 
 func _interacted(interactable):
 	if interactable:
-		if current_host: current_host.leave_control()
-		
-		current_host = interactable.get_parent()
-		sprite.visible = false
-		collision_shape.set_deferred("disabled", true)
+		if interactable.get_parent() is Host:
+			if current_host: current_host.leave_control()
+			
+			current_host = interactable.get_parent()
+			sprite.visible = false
+			collision_shape.set_deferred("disabled", true)

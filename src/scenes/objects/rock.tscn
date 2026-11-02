@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bqyg7lig8lenp"]
+
+[ext_resource type="Texture2D" uid="uid://cr4ya1vri0wvu" path="res://assets/Rock Rock Rock/basalt_isometric.png" id="1_2dker"]
+[ext_resource type="Script" uid="uid://dxkot7ra73qpq" path="res://scenes/objects/rock.gd" id="1_6jkjv"]
+[ext_resource type="PackedScene" uid="uid://cy5446qbvkfvf" path="res://scenes/components/interactable_component.tscn" id="3_xnkle"]
+[ext_resource type="Texture2D" uid="uid://co6d8foo3xfxr" path="res://assets/characters/pnj/civilian_man.png" id="4_xnkle"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46w7f"]
+atlas = ExtResource("1_2dker")
+region = Rect2(1001, 275, 86, 73)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ggdn5"]
+size = Vector2(71, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vl5yh"]
+atlas = ExtResource("4_xnkle")
+region = Rect2(13.28772, 1547.3556, 40.262756, 51.536255)
+
+[node name="Rock" type="RigidBody2D" unique_id=1765450992]
+script = ExtResource("1_6jkjv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1468388740]
+visible = false
+texture = SubResource("AtlasTexture_46w7f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1581481642]
+position = Vector2(0.5, 3)
+shape = SubResource("RectangleShape2D_ggdn5")
+
+[node name="InteractableComponent" parent="." unique_id=2036713416 instance=ExtResource("3_xnkle")]
+
+[node name="Sprite2D" parent="InteractableComponent" index="0" unique_id=1549141649]
+position = Vector2(0, -42)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=152756262]
+position = Vector2(0, 7)
+texture = SubResource("AtlasTexture_vl5yh")
+
+[editable path="InteractableComponent"]

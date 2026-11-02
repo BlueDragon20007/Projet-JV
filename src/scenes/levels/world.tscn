@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dixp8v7cruhka" path="res://scenes/characters/hosts/host_civilian.tscn" id="4_7xgas"]
 [ext_resource type="PackedScene" uid="uid://72uqima55844" path="res://scenes/levels/level_1.tscn" id="4_w2p53"]
 [ext_resource type="PackedScene" uid="uid://byhja65extxgh" path="res://scenes/menus/pause_menu.tscn" id="5_7xgas"]
+[ext_resource type="PackedScene" uid="uid://cvkn54jvgyiij" path="res://scenes/characters/hosts/host_muscular.tscn" id="6_gy5pc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46w7f"]
 size = Vector2(1188, 23)
@@ -14,10 +15,12 @@ size = Vector2(1188, 23)
 [node name="Level1" parent="." unique_id=1909810422 instance=ExtResource("4_w2p53")]
 
 [node name="RigidBody2D" type="StaticBody2D" parent="." unique_id=1923151387]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1023912192]
 position = Vector2(365, 336)
 shape = SubResource("RectangleShape2D_46w7f")
+disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1384052064]
 position = Vector2(357, 330.50003)
@@ -25,36 +28,49 @@ scale = Vector2(9.21875, 0.2890625)
 texture = ExtResource("1_tsias")
 
 [node name="Parasite" parent="." unique_id=1342676814 instance=ExtResource("2_7k8c1")]
-position = Vector2(231, 264)
+position = Vector2(261, 272)
 
 [node name="HostCivilian" parent="." unique_id=1525804536 instance=ExtResource("4_7xgas")]
-position = Vector2(289, 277)
+position = Vector2(179, 272)
+role = ""
 
 [node name="HostCivilian2" parent="." unique_id=2043996825 instance=ExtResource("4_7xgas")]
-position = Vector2(355, 273)
+position = Vector2(117, 269)
+role = ""
 
 [node name="HostCivilian3" parent="." unique_id=57661743 instance=ExtResource("4_7xgas")]
-position = Vector2(436, 274)
+position = Vector2(199, 276)
+role = ""
 
 [node name="HostCivilian4" parent="." unique_id=1276776096 instance=ExtResource("4_7xgas")]
-position = Vector2(459, 272)
+position = Vector2(30, 246)
+role = ""
 
 [node name="HostCivilian5" parent="." unique_id=1519967330 instance=ExtResource("4_7xgas")]
-position = Vector2(508, 275)
+position = Vector2(42, 279)
+role = ""
 
 [node name="HostCivilian6" parent="." unique_id=1934708111 instance=ExtResource("4_7xgas")]
-position = Vector2(402, 274)
+position = Vector2(91, 265)
+role = ""
 
 [node name="HostCivilian7" parent="." unique_id=368476047 instance=ExtResource("4_7xgas")]
-position = Vector2(260, 269)
+position = Vector2(107, 273)
+role = ""
 
 [node name="HostCivilian8" parent="." unique_id=84118084 instance=ExtResource("4_7xgas")]
-position = Vector2(186, 274)
+position = Vector2(72, 282)
+role = ""
 
 [node name="HostCivilian9" parent="." unique_id=1813451741 instance=ExtResource("4_7xgas")]
 position = Vector2(140, 268)
+role = ""
 
 [node name="HostCivilian10" parent="." unique_id=1689407066 instance=ExtResource("4_7xgas")]
 position = Vector2(67, 270)
+role = ""
 
 [node name="PauseMenu" parent="." unique_id=347215819 instance=ExtResource("5_7xgas")]
+
+[node name="HostMuscular" parent="." unique_id=877563200 instance=ExtResource("6_gy5pc")]
+position = Vector2(321, 290)

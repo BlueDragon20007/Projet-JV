@@ -36,4 +36,4 @@ func get_closest_interactable():
 	
 func activate_interact():
 	interact.emit(current_interactable)
-	current_interactable.interact.emit()
+	current_interactable.interact.emit(get_parent())

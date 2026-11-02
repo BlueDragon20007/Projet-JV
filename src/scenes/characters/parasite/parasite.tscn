@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bosdpgt6es66" path="res://assets/characters/parasite_parts/parasite_leg.png" id="4_783am"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46w7f"]
+size = Vector2(20, 15)
 
 [sub_resource type="Animation" id="Animation_3px0q"]
 length = 0.001
@@ -143,7 +144,7 @@ script = ExtResource("1_ywyf0")
 [node name="InteractorComponent" parent="." unique_id=1168251629 instance=ExtResource("2_3px0q")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1572625013]
-visible = false
+position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_46w7f")
 
 [node name="Body" type="Sprite2D" parent="." unique_id=575974172]
@@ -166,7 +167,7 @@ centered = false
 offset = Vector2(-40, -18)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2106198248]
-offset = Vector2(0, -100)
+offset = Vector2(0, -120)
 position_smoothing_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1320304614]
