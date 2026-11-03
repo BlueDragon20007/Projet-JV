@@ -8,6 +8,7 @@ signal closed
 @onready var back_button : Button = %BackButton
 
 var master_bus : int = AudioServer.get_bus_index("Master")
+var music_bus : int = AudioServer.get_bus_index("Music")
 
 func _ready() -> void:
 	hide()
@@ -21,7 +22,7 @@ func open() -> void:
 	volume_slider.grab_focus()
 
 func _on_volume_changed(value : float) -> void:
-	AudioServer.set_bus_volume_db(master_bus, linear_to_db(value))
+	AudioServer.set_bus_volume_db(music_bus, linear_to_db(value))
 
 func _on_fullscreen_toggled(enabled : bool) -> void:
 	if enabled:

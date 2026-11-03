@@ -39,7 +39,7 @@ position = Vector2(127, 312)
 role = ""
 
 [node name="HostCivilian3" parent="." unique_id=57661743 instance=ExtResource("4_7xgas")]
-position = Vector2(227, 308)
+position = Vector2(381, 312)
 role = ""
 
 [node name="HostCivilian4" parent="." unique_id=1276776096 instance=ExtResource("4_7xgas")]

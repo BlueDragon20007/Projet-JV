@@ -36,6 +36,8 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 max_value = 1.0
 step = 0.05
+value = 1.0
+tick_count = 1
 
 [node name="FullscreenCheck" type="CheckBox" parent="PanelContainer/VBoxContainer" unique_id=102530155]
 unique_name_in_owner = true

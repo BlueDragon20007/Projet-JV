@@ -49,3 +49,4 @@ text = "Menu"
 
 [node name="OptionsMenu" parent="." unique_id=1822712464 instance=ExtResource("2_7unhi")]
 unique_name_in_owner = true
+visible = false
