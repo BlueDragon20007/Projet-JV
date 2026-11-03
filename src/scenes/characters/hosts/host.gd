@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var ray: RayCast2D = $Sprite2D/RayCast2D
 
 @onready var interactable_component: Node2D = $InteractableComponent
 @onready var state_machine: Node = $StateMachine

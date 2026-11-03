@@ -114,6 +114,9 @@ hframes = 13
 vframes = 54
 frame = 325
 
+[node name="RayCast2D" type="RayCast2D" parent="Sprite2D" unique_id=1776329891]
+target_position = Vector2(30, 0)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1853352971]
 libraries/ = SubResource("AnimationLibrary_u42fc")
 

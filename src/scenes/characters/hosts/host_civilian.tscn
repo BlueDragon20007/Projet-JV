@@ -33,7 +33,4 @@ material = SubResource("ShaderMaterial_exyhk")
 [node name="CollisionShape2D" parent="." index="2" unique_id=1870755748]
 visible = false
 
-[node name="StateMachine" parent="." index="4" unique_id=790081971 node_paths=PackedStringArray("initial_state")]
-initial_state = NodePath("Walk")
-
 [editable path="InteractableComponent"]
