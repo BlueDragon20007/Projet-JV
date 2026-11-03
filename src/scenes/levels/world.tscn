@@ -28,49 +28,33 @@ scale = Vector2(9.21875, 0.2890625)
 texture = ExtResource("1_tsias")
 
 [node name="Parasite" parent="." unique_id=1342676814 instance=ExtResource("2_7k8c1")]
-position = Vector2(261, 272)
+position = Vector2(342, 331)
 
 [node name="HostCivilian" parent="." unique_id=1525804536 instance=ExtResource("4_7xgas")]
-position = Vector2(179, 272)
+position = Vector2(193, 307)
 role = ""
 
 [node name="HostCivilian2" parent="." unique_id=2043996825 instance=ExtResource("4_7xgas")]
-position = Vector2(117, 269)
+position = Vector2(127, 312)
 role = ""
 
 [node name="HostCivilian3" parent="." unique_id=57661743 instance=ExtResource("4_7xgas")]
-position = Vector2(199, 276)
+position = Vector2(227, 308)
 role = ""
 
 [node name="HostCivilian4" parent="." unique_id=1276776096 instance=ExtResource("4_7xgas")]
-position = Vector2(30, 246)
+position = Vector2(22, 309)
 role = ""
 
 [node name="HostCivilian5" parent="." unique_id=1519967330 instance=ExtResource("4_7xgas")]
-position = Vector2(42, 279)
+position = Vector2(50, 310)
 role = ""
 
 [node name="HostCivilian6" parent="." unique_id=1934708111 instance=ExtResource("4_7xgas")]
-position = Vector2(91, 265)
-role = ""
-
-[node name="HostCivilian7" parent="." unique_id=368476047 instance=ExtResource("4_7xgas")]
-position = Vector2(107, 273)
-role = ""
-
-[node name="HostCivilian8" parent="." unique_id=84118084 instance=ExtResource("4_7xgas")]
-position = Vector2(72, 282)
-role = ""
-
-[node name="HostCivilian9" parent="." unique_id=1813451741 instance=ExtResource("4_7xgas")]
-position = Vector2(140, 268)
-role = ""
-
-[node name="HostCivilian10" parent="." unique_id=1689407066 instance=ExtResource("4_7xgas")]
-position = Vector2(67, 270)
+position = Vector2(84, 306)
 role = ""
 
 [node name="PauseMenu" parent="." unique_id=347215819 instance=ExtResource("5_7xgas")]
 
 [node name="HostMuscular" parent="." unique_id=877563200 instance=ExtResource("6_gy5pc")]
-position = Vector2(321, 290)
+position = Vector2(160, 307)

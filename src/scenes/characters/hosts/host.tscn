@@ -127,7 +127,7 @@ position = Vector2(0, -28)
 
 [node name="StateMachine" type="Node" parent="." unique_id=790081971 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("4_n2eij")
-initial_state = NodePath("Idle")
+initial_state = NodePath("Walk")
 
 [node name="Idle" type="Node" parent="StateMachine" unique_id=2093562594]
 script = ExtResource("5_exyhk")

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bttadqjly5ith"]
+
+[ext_resource type="Script" uid="uid://dcrhk7wa2mlhh" path="res://scripts/singletons/music_manager.gd" id="1_wr8bm"]
+[ext_resource type="AudioStream" uid="uid://dds1kd7pe46mk" path="res://audios/musics/MainMusic.mp3" id="2_kvt4n"]
+
+[node name="MusicManager" type="Node2D" unique_id=746481677]
+script = ExtResource("1_wr8bm")
+
+[node name="MainTheme" type="AudioStreamPlayer2D" parent="." unique_id=461868266]
+stream = ExtResource("2_kvt4n")
