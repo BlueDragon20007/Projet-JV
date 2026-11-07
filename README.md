@@ -10,6 +10,12 @@ Vous incarnez un parasite déterminé à éradiquer l'humanité de la surface de
 
 ---
 
+## Image d’aperçu
+
+![Image](preview.png)
+
+---
+
 ## Concepts utilisés
 
 - [Concept 1]
@@ -23,8 +29,6 @@ Vous incarnez un parasite déterminé à éradiquer l'humanité de la surface de
 **Description :**  
 [Description détaillée du concept, son rôle dans le jeu et la manière dont il a été implémenté.]
 
-**Source de l'information :**  
-- [Documentation officielle Godot / Article / Tutoriel](https://example.com)
+**Source de l'information :**
 
-**Illustration :**  
-![Illustration du concept 1](docs/images/concept-1.png)
+- [Documentation officielle Godot / Article / Tutoriel](https://example.com)
