@@ -39,19 +39,7 @@ position = Vector2(127, 312)
 role = ""
 
 [node name="HostCivilian3" parent="." unique_id=57661743 instance=ExtResource("4_7xgas")]
-position = Vector2(381, 312)
-role = ""
-
-[node name="HostCivilian4" parent="." unique_id=1276776096 instance=ExtResource("4_7xgas")]
-position = Vector2(22, 309)
-role = ""
-
-[node name="HostCivilian5" parent="." unique_id=1519967330 instance=ExtResource("4_7xgas")]
-position = Vector2(50, 310)
-role = ""
-
-[node name="HostCivilian6" parent="." unique_id=1934708111 instance=ExtResource("4_7xgas")]
-position = Vector2(84, 306)
+position = Vector2(228, 307)
 role = ""
 
 [node name="PauseMenu" parent="." unique_id=347215819 instance=ExtResource("5_7xgas")]

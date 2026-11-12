@@ -8,12 +8,12 @@ extends CharacterBody2D
 const SPEED = 100.0
 const JUMP_VELOCITY = -300.0
 
-enum State {
-	NORMAL,
-	POSSESSING
-}
-
-var current_state: State
+#enum State {
+	#NORMAL,
+	#POSSESSING
+#}
+#
+#var current_state: States
 
 var current_host = null
 

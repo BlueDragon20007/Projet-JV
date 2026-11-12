@@ -371,10 +371,4 @@ tile_map_data = PackedByteArray("AAAAABYAAAACAAAAAAABABYAAAACAAAAAAACABYAAAACAAA
 tile_set = SubResource("TileSet_46w7f")
 
 [node name="Rock" parent="." unique_id=1765450992 instance=ExtResource("5_6761a")]
-position = Vector2(671, 321)
-
-[node name="Rock2" parent="." unique_id=1395053163 instance=ExtResource("5_6761a")]
-position = Vector2(591, 319)
-
-[node name="Rock3" parent="." unique_id=1228936940 instance=ExtResource("5_6761a")]
-position = Vector2(509, 320)
+position = Vector2(541, 323)

@@ -7,7 +7,6 @@ signal closed
 @onready var fullscreen_check : CheckBox = %FullscreenCheck
 @onready var back_button : Button = %BackButton
 
-var master_bus : int = AudioServer.get_bus_index("Master")
 var music_bus : int = AudioServer.get_bus_index("Music")
 
 func _ready() -> void:

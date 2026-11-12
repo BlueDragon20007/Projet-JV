@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bb3ngtsq25syx"]
+
+[ext_resource type="PackedScene" uid="uid://b77ip64sgqyc0" path="res://scenes/characters/hosts/host.tscn" id="1_ucpbe"]
+[ext_resource type="Texture2D" uid="uid://0ivpisrcklsp" path="res://assets/characters/pnj/president.png" id="2_m8ngg"]
+
+[node name="HostPresident" unique_id=1525804536 instance=ExtResource("1_ucpbe")]
+role = "president"
+
+[node name="Sprite2D" parent="." index="0" unique_id=1666310450]
+texture = ExtResource("2_m8ngg")
+
+[editable path="InteractableComponent"]

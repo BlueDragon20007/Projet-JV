@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://enefaedtm6ha"]
+
+[ext_resource type="Script" uid="uid://bl3dyr23vm5cg" path="res://scenes/utils/cinematic_transition.gd" id="1_hi3vu"]
+
+[node name="CinematicTransition" type="Control" unique_id=94402574]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hi3vu")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1828748706]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SkipButton" type="Button" parent="." unique_id=44881818]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Skip
+"

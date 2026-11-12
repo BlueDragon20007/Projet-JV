@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://larx04n7xt32"]
+
+[ext_resource type="Texture2D" uid="uid://dipxmt48lniom" path="res://assets/backgrounds/president_room2.png" id="1_44gv1"]
+[ext_resource type="PackedScene" uid="uid://dnbgbu2ern4vb" path="res://scenes/characters/parasite/parasite.tscn" id="2_0ljxa"]
+[ext_resource type="PackedScene" uid="uid://bb3ngtsq25syx" path="res://scenes/characters/hosts/host_president.tscn" id="3_0ljxa"]
+[ext_resource type="PackedScene" uid="uid://4mexxnq7u1aw" path="res://scenes/components/change_scene_interactable.tscn" id="4_0qepi"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ggdn5"]
+
+[node name="Level3" type="Node2D" unique_id=1252577409]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1596717672]
+scale = Vector2(2, 2)
+texture = ExtResource("1_44gv1")
+centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1736236338]
+position = Vector2(0, 330)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=112402298]
+shape = SubResource("WorldBoundaryShape2D_ggdn5")
+
+[node name="Parasite" parent="." unique_id=1342676814 instance=ExtResource("2_0ljxa")]
+position = Vector2(319, 293)
+scale = Vector2(3, 3)
+
+[node name="Camera2D" parent="Parasite" index="3" unique_id=2106198248]
+limit_left = 0
+limit_top = 120
+limit_bottom = 480
+limit_smoothed = true
+
+[node name="HostPresident" parent="." unique_id=1525804536 instance=ExtResource("3_0ljxa")]
+position = Vector2(894, 201)
+scale = Vector2(4, 4)
+
+[node name="ChangeSceneInteractable" parent="." unique_id=748792428 instance=ExtResource("4_0qepi")]
+position = Vector2(1072, 190)
+scale = Vector2(4, 4)
+max_distance = 180.0
+
+[editable path="Parasite"]
