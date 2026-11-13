@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b8j3h4upbbw3"]
+
+[ext_resource type="Script" uid="uid://dkup0bk0cmooq" path="res://scenes/levels/button_minigame.gd" id="1_j0udw"]
+[ext_resource type="Texture2D" uid="uid://cbne3khxabgo4" path="res://assets/backgrounds/hand.png" id="2_p3gk4"]
+[ext_resource type="Texture2D" uid="uid://oig1lodoeyor" path="res://assets/backgrounds/button.png" id="2_y3g4p"]
+
+[node name="ButtonMinigame" type="Node2D" unique_id=1833455361]
+script = ExtResource("1_j0udw")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=451480849]
+position = Vector2(-81, 0)
+scale = Vector2(0.61875, 0.725)
+texture = ExtResource("2_y3g4p")
+centered = false
+
+[node name="Hand" type="Sprite2D" parent="." unique_id=1065382469]
+position = Vector2(256, 14.999996)
+rotation = -0.23212878
+texture = ExtResource("2_p3gk4")
+flip_h = true

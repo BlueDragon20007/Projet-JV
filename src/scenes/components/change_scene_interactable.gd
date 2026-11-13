@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var target_scene: String = "res://scenes/levels/world.tscn"
+@export_file("*.tscn") var target_scene: String = ""
 @export var required_role: String = "president"
 @export var max_distance := 100.0
 
@@ -14,5 +14,5 @@ func _on_interacted(interactor) -> void:
 	if not interactor or not interactor.current_host:
 		return
 		
-	if interactor.current_host.role == required_role:
+	if interactor.current_host.role == required_role or required_role == "":
 		get_tree().change_scene_to_file(target_scene)

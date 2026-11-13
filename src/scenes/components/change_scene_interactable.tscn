@@ -5,6 +5,5 @@
 
 [node name="ChangeSceneInteractable" type="Node2D" unique_id=748792428]
 script = ExtResource("1_uo5tp")
-target_scene = "res://scenes/menus/end_scene.tscn"
 
 [node name="InteractableComponent" parent="." unique_id=2036713416 instance=ExtResource("2_5o0r2")]
