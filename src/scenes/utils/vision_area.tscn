@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bca4ha16ye8jx"]
+
+[ext_resource type="Script" uid="uid://3h3ud4a8elqd" path="res://scenes/utils/vision_area.gd" id="1_xp345"]
+
+[node name="VisionArea" type="Area2D" unique_id=1996532288]
+collision_mask = 2
+script = ExtResource("1_xp345")

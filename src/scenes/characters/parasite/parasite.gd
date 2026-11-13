@@ -1,3 +1,4 @@
+class_name Parasite
 extends CharacterBody2D
 
 @onready var interactor_component: Node2D = $InteractorComponent
