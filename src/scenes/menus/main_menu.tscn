@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://npu6xh4x7n2w"]
 
 [ext_resource type="Script" uid="uid://csnk2jch42yb5" path="res://scenes/menus/main_menu.gd" id="1_ovrgc"]
-[ext_resource type="Texture2D" uid="uid://faeg5ps1i226" path="res://assets/icon.svg" id="1_xqga4"]
+[ext_resource type="Texture2D" uid="uid://cai8ffk8rqbf1" path="res://assets/backgrounds/menu.png" id="2_2o76q"]
 [ext_resource type="PackedScene" uid="uid://gbtuwdkk5m1t" path="res://scenes/menus/options_menu.tscn" id="3_2o76q"]
+[ext_resource type="FontFile" uid="uid://djryijyewc5e6" path="res://assets/fonts/alagard.ttf" id="4_6bivr"]
 
 [node name="MainMenu" type="Control" unique_id=765374334]
 layout_mode = 3
@@ -20,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_xqga4")
+texture = ExtResource("2_2o76q")
 expand_mode = 3
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=724610632]
@@ -32,9 +33,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=230397342]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1671756759]
 layout_mode = 2
 
 [node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1218057821]
@@ -60,3 +58,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1316570931]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 42.0
+offset_bottom = 77.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("4_6bivr")
+bbcode_enabled = true
+text = "[center][font_size=35][outline_size=12][outline_color=#08080c][color=#f4a3f8]OPERATION [/color][wave amp=15.0 freq=2.0 connected=1][color=#e2e8f0]MIND[/color][/wave][shake rate=15.0 level=12 connected=0][color=#e11d48]FLEA[/color][/shake][/outline_color][/outline_size][/font_size][/center]"
