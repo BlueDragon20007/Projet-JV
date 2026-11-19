@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dkup0bk0cmooq" path="res://scenes/levels/button_minigame.gd" id="1_j0udw"]
 [ext_resource type="Texture2D" uid="uid://cbne3khxabgo4" path="res://assets/backgrounds/hand.png" id="2_p3gk4"]
 [ext_resource type="Texture2D" uid="uid://oig1lodoeyor" path="res://assets/backgrounds/button.png" id="2_y3g4p"]
+[ext_resource type="Texture2D" uid="uid://cs2qmy0ah8014" path="res://assets/ui/key_e.tres" id="4_y3g4p"]
 
 [node name="ButtonMinigame" type="Node2D" unique_id=1833455361]
 script = ExtResource("1_j0udw")
@@ -18,3 +19,8 @@ position = Vector2(256, 14.999996)
 rotation = -0.23212878
 texture = ExtResource("2_p3gk4")
 flip_h = true
+
+[node name="Press" type="Sprite2D" parent="." unique_id=1717992859]
+position = Vector2(478, 118)
+scale = Vector2(4, 4)
+texture = ExtResource("4_y3g4p")

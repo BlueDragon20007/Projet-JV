@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://e70c55nukrcs"
+path="res://.godot/imported/Bow Shoot.wav-8cbbef1b7844399b751f9974f11cae09.sample"
+
+[deps]
+
+source_file="res://audios/Sound FX Starter Pack Vol. 1/Medieval/Bow Shoot.wav"
+dest_files=["res://.godot/imported/Bow Shoot.wav-8cbbef1b7844399b751f9974f11cae09.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

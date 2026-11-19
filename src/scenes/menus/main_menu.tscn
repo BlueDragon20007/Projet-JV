@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://csnk2jch42yb5" path="res://scenes/menus/main_menu.gd" id="1_ovrgc"]
 [ext_resource type="Texture2D" uid="uid://cai8ffk8rqbf1" path="res://assets/backgrounds/menu.png" id="2_2o76q"]
 [ext_resource type="PackedScene" uid="uid://gbtuwdkk5m1t" path="res://scenes/menus/options_menu.tscn" id="3_2o76q"]
+[ext_resource type="StyleBox" uid="uid://bn4u4wythumje" path="res://assets/ui/normal_button.tres" id="3_imvie"]
 [ext_resource type="FontFile" uid="uid://djryijyewc5e6" path="res://assets/fonts/alagard.ttf" id="4_6bivr"]
 
 [node name="MainMenu" type="Control" unique_id=765374334]
@@ -38,6 +39,7 @@ layout_mode = 2
 [node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1218057821]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_styles/normal = ExtResource("3_imvie")
 text = "Jouer"
 
 [node name="OptionsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1567402972]
@@ -52,6 +54,7 @@ text = "Quitter"
 
 [node name="OptionsMenu" parent="." unique_id=1822712464 instance=ExtResource("3_2o76q")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

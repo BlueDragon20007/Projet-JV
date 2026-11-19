@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dfc20tsglytv7"
+path="res://.godot/imported/Log Off.wav-e2906228dafb9f1b639d7f4203aa5dd6.sample"
+
+[deps]
+
+source_file="res://audios/Sound FX Starter Pack Vol. 1/Jingles & Stingers/Log Off.wav"
+dest_files=["res://.godot/imported/Log Off.wav-e2906228dafb9f1b639d7f4203aa5dd6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

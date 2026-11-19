@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Project-Mindflea"
+config/name="Operation Mindflea"
 run/main_scene="uid://npu6xh4x7n2w"
 config/features=PackedStringArray("4.7")
 config/icon="res://assets/icon.svg"
@@ -34,6 +34,10 @@ window/stretch/mode="canvas_items"
 
 interactor=""
 interactable=""
+
+[gui]
+
+theme/custom="uid://b0836r2a75bna"
 
 [input]
 

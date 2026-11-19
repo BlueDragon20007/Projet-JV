@@ -11,7 +11,7 @@ extends CharacterBody2D
 
 @export var role: String = ""
 
-const SPEED = 30.0
+var speed = randf_range(25.0, 35.0)
 const POSSESSED_SPEED = 60.0
 const JUMP_VELOCITY = -300.0
 
