@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cuyhii0j8ma67"]
+
+[ext_resource type="Script" uid="uid://dv80uer1ilep0" path="res://scenes/ui/debug_overlay.gd" id="1_tasbd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tasbd"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.4117647, 0, 0.41568628, 0.5019608)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5940502, 0.00027569293, 0.59949815, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="DebugOverlay" type="CanvasLayer" unique_id=142661693]
+process_mode = 3
+script = ExtResource("1_tasbd")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=2008010375]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(-7, 7)
+theme_override_styles/panel = SubResource("StyleBoxFlat_tasbd")
+
+[node name="StatsLabel" type="Label" parent="PanelContainer" unique_id=1642848296]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "FPS : 144"

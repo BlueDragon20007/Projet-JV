@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://72uqima55844" path="res://scenes/levels/level_1.tscn" id="4_w2p53"]
 [ext_resource type="PackedScene" uid="uid://byhja65extxgh" path="res://scenes/menus/pause_menu.tscn" id="5_7xgas"]
 [ext_resource type="PackedScene" uid="uid://cvkn54jvgyiij" path="res://scenes/characters/hosts/host_muscular.tscn" id="6_gy5pc"]
+[ext_resource type="PackedScene" uid="uid://cuyhii0j8ma67" path="res://scenes/ui/debug_overlay.tscn" id="7_0lift"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46w7f"]
 size = Vector2(1188, 23)
@@ -46,3 +47,5 @@ role = ""
 
 [node name="HostMuscular" parent="." unique_id=877563200 instance=ExtResource("6_gy5pc")]
 position = Vector2(160, 307)
+
+[node name="DebugOverlay" parent="." unique_id=142661693 instance=ExtResource("7_0lift")]
