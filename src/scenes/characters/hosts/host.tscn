@@ -2,14 +2,24 @@
 
 [ext_resource type="Script" uid="uid://crgw38me4x3gq" path="res://scenes/characters/hosts/host.gd" id="1_sspma"]
 [ext_resource type="Texture2D" uid="uid://co6d8foo3xfxr" path="res://assets/characters/pnj/civilian_man.png" id="2_exyhk"]
+[ext_resource type="AudioStream" uid="uid://dltudt4x5roy7" path="res://audios/sounds/screams/man_scream_1.wav" id="2_yrg4h"]
 [ext_resource type="PackedScene" uid="uid://bca4ha16ye8jx" path="res://scenes/utils/vision_area.tscn" id="3_ai2vf"]
+[ext_resource type="AudioStream" uid="uid://bcoynrlbo6euv" path="res://audios/sounds/screams/man_scream_2.wav" id="3_ebxmb"]
 [ext_resource type="PackedScene" uid="uid://cy5446qbvkfvf" path="res://scenes/components/interactable_component.tscn" id="3_oxciu"]
+[ext_resource type="AudioStream" uid="uid://8yyflxhu88ew" path="res://audios/sounds/screams/man_scream_3.wav" id="4_2dgbo"]
 [ext_resource type="Script" uid="uid://dt5hbf5ym0mmx" path="res://scripts/state_machine/state_machine.gd" id="4_n2eij"]
 [ext_resource type="PackedScene" uid="uid://dnbgbu2ern4vb" path="res://scenes/characters/parasite/parasite.tscn" id="4_oeu0x"]
 [ext_resource type="Script" uid="uid://ck53clmncb3lf" path="res://scripts/state_machine/npc/host_idle.gd" id="5_exyhk"]
+[ext_resource type="AudioStream" uid="uid://cn1qva3roarc8" path="res://audios/sounds/screams/man_scream_4.wav" id="5_mefmi"]
+[ext_resource type="AudioStream" uid="uid://eo7c5fo3vwrm" path="res://audios/sounds/screams/man_scream_5.wav" id="6_7wy5h"]
 [ext_resource type="Script" uid="uid://c332ci26whj4g" path="res://scripts/state_machine/npc/host_walk.gd" id="6_ai2vf"]
+[ext_resource type="AudioStream" uid="uid://by12o2wy2ksm7" path="res://audios/sounds/screams/woman_scream_1.wav" id="7_0i3d3"]
 [ext_resource type="Script" uid="uid://bchen4xomsy8t" path="res://scripts/state_machine/npc/host_possessed.gd" id="7_exyhk"]
+[ext_resource type="AudioStream" uid="uid://6emrxxthggvy" path="res://audios/sounds/screams/woman_scream_2.wav" id="8_22ctm"]
+[ext_resource type="AudioStream" uid="uid://vtcdbq54ddii" path="res://audios/sounds/screams/woman_scream_3.wav" id="9_parm1"]
+[ext_resource type="AudioStream" uid="uid://dkoqyuj8k5kna" path="res://audios/sounds/screams/woman_scream_4.wav" id="10_kgpjm"]
 [ext_resource type="Script" uid="uid://fjdo4lfo85mg" path="res://scripts/state_machine/npc/host_flee.gd" id="10_u42fc"]
+[ext_resource type="AudioStream" uid="uid://bknkupfk6ikq0" path="res://audios/sounds/screams/woman_scream_5.wav" id="11_tcwpk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46w7f"]
 size = Vector2(132, 53)
@@ -143,6 +153,7 @@ height = 48.0
 [node name="Host" type="CharacterBody2D" unique_id=1525804536]
 collision_layer = 2
 script = ExtResource("1_sspma")
+scream_sounds = Array[AudioStream]([ExtResource("2_yrg4h"), ExtResource("3_ebxmb"), ExtResource("4_2dgbo"), ExtResource("5_mefmi"), ExtResource("6_7wy5h"), ExtResource("7_0i3d3"), ExtResource("8_22ctm"), ExtResource("9_parm1"), ExtResource("10_kgpjm"), ExtResource("11_tcwpk")])
 role = "host"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1666310450]
@@ -187,5 +198,8 @@ script = ExtResource("7_exyhk")
 
 [node name="Flee" type="Node" parent="StateMachine" unique_id=1865488484]
 script = ExtResource("10_u42fc")
+
+[node name="ScreamPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1918078540]
+stream = ExtResource("2_yrg4h")
 
 [editable path="InteractableComponent"]

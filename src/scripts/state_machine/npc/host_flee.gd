@@ -1,40 +1,76 @@
 class_name HostFlee
 extends HostBaseState
 
-var base_position := 0
-var target_x := 0
 
-const MIN_DISTANCE := 20.0
-const MAX_DISTANCE := 200.0
-const ARRIVAL_DIST: float = 4.0
+var flee_from = Vector2.ZERO
+var target_x = 0.0
 
-func enter():
+const FLEE_DISTANCE = 200.0
+const ARRIVAL_DIST = 4.0
+const FLEE_SPEED_MOD = 2.0
+const SAFE_DISTANCE = 300.0
+
+
+func enter() -> void:
 	host.animation_player.play("run")
-	base_position = host.position.x
-	var offset: float = 0.0
-	
-	if host.ray.is_colliding():
-		host.sprite.scale.x = -host.sprite.scale.x
-		
-		offset = randf_range(MIN_DISTANCE, MAX_DISTANCE) * host.sprite.scale.x
+
+	pick_flee_target()
+
+
+func pick_flee_target() -> void:
+	var away_dir = 1.0
+
+	if flee_from != Vector2.ZERO:
+		away_dir = sign(host.global_position.x - flee_from.x)
+		if away_dir == 0.0:
+			away_dir = 1.0
 	else:
-		offset = randf_range(-MAX_DISTANCE, MAX_DISTANCE)
-		
-	target_x = host.position.x + offset
+		away_dir = 1.0 if randf() > 0.5 else -1.0
 
+	host.sprite.scale.x = abs(host.sprite.scale.x) * away_dir
+	host.ray.force_raycast_update()
 
-func physics_update(delta: float) -> void:
 	if host.ray.is_colliding():
-		host.velocity.x = 0
+		away_dir = -away_dir
+		host.sprite.scale.x = abs(host.sprite.scale.x) * away_dir
+
+	target_x = host.global_position.x + away_dir * FLEE_DISTANCE
+
+
+func physics_update(_delta: float) -> void:
+	if flee_from != Vector2.ZERO and host.global_position.distance_to(flee_from) >= SAFE_DISTANCE:
+		host.velocity.x = 0.0
+		host.panic = 0.0
 		Transitioned.emit(self, "idle")
 		return
-		
-	var distance_x := target_x - host.position.x
+
+	if host.ray.is_colliding():
+		host.velocity.x = 0.0
+		host.panic = 0.0
+		Transitioned.emit(self, "idle")
+		return
+
+	var distance_x = target_x - host.global_position.x
 	if abs(distance_x) <= ARRIVAL_DIST:
-		host.velocity.x = 0
+		pick_flee_target()
+		return
+
+	var direction = sign(distance_x)
+	apply_horizontal_movement(direction, FLEE_SPEED_MOD)
+
+func reverse_direction() -> void:
+	var current_dir = sign(target_x - host.global_position.x)
+	if current_dir == 0.0:
+		current_dir = 1.0
+
+	var new_dir = -current_dir
+	host.sprite.scale.x = abs(host.sprite.scale.x) * new_dir
+	host.ray.force_raycast_update()
+
+	if host.ray.is_colliding():
+		host.velocity.x = 0.0
+		host.panic = 0.0
 		Transitioned.emit(self, "idle")
 		return
-		
-	var direction = sign(distance_x)
-	apply_horizontal_movement(direction)
-	
+
+	target_x = host.global_position.x + new_dir * FLEE_DISTANCE
