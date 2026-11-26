@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bqbc6c54ni0ij"]
+
+[ext_resource type="PackedScene" uid="uid://b77ip64sgqyc0" path="res://scenes/characters/hosts/host.tscn" id="1_5dpma"]
+[ext_resource type="Script" uid="uid://h37xgo3sk0xr" path="res://scenes/characters/hosts/host_guard.gd" id="2_mio1k"]
+[ext_resource type="Texture2D" uid="uid://r3iyotcj2031" path="res://assets/characters/pnj/guard.png" id="3_mio1k"]
+[ext_resource type="Script" uid="uid://bfcw6n10kcc5y" path="res://scripts/state_machine/npc/host_shoot.gd" id="4_7hwsg"]
+
+[node name="HostGuard" unique_id=1525804536 instance=ExtResource("1_5dpma")]
+script = ExtResource("2_mio1k")
+scream_sounds = Array[AudioStream]([])
+role = ""
+
+[node name="Sprite2D" parent="." index="0" unique_id=1666310450]
+texture = ExtResource("3_mio1k")
+
+[node name="Shoot" type="Node" parent="StateMachine" parent_id_path=PackedInt32Array(790081971) index="4" unique_id=786646971]
+script = ExtResource("4_7hwsg")
+
+[editable path="InteractableComponent"]

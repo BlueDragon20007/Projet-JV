@@ -103,7 +103,7 @@ func _visible_parasite() -> Parasite:
 	for body in vision_area.get_overlapping_bodies():
 		if body is Parasite:
 			return body as Parasite
-
+	
 	return null
 
 
