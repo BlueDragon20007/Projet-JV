@@ -49,3 +49,6 @@ role = ""
 position = Vector2(160, 307)
 
 [node name="DebugOverlay" parent="." unique_id=142661693 instance=ExtResource("7_0lift")]
+
+[node name="HostCivilian4" parent="." unique_id=1003832000 instance=ExtResource("4_7xgas")]
+position = Vector2(271, 314)

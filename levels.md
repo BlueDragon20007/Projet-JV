@@ -4,10 +4,10 @@ Bodybuilder - Soulever une roche qui bloque le passage
 
 Livreur - Approcher le garde
 
-Garde - Ouvrir une porte avec ses cles
+Garde - Rentrer dans la maison blanche
 
-# Niveau 2 - Batiment
+# Niveau 2 - Maison blanche
 
-# Niveau 3 - ? (Avant president)
+# Niveau 3 - Bureau du president
 
-Distraction - Ateindre le president
+Appuyer sur le bouton -> Combat de volonte

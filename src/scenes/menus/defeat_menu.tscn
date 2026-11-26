@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://b5a3nx3q3duqw"]
+
+[ext_resource type="Script" uid="uid://bp0j7foey4v4b" path="res://scenes/menus/defeat_menu.gd" id="1_defeat"]
+[ext_resource type="Texture2D" uid="uid://cai8ffk8rqbf1" path="res://assets/backgrounds/menu.png" id="2_bg"]
+[ext_resource type="StyleBox" uid="uid://bn4u4wythumje" path="res://assets/ui/normal_button.tres" id="3_btn"]
+[ext_resource type="FontFile" uid="uid://djryijyewc5e6" path="res://assets/fonts/alagard.ttf" id="4_font"]
+
+[node name="DefeatMenu" type="Control" unique_id=195941304]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_defeat")
+
+[node name="Background" type="TextureRect" parent="." unique_id=979235559]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+expand_mode = 3
+
+[node name="Dim" type="ColorRect" parent="." unique_id=547516969]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.18, 0.03, 0.08, 0.55)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=361878457]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1919492250]
+layout_mode = 2
+
+[node name="RetryButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=26636979]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = ExtResource("3_btn")
+text = "Rejouer"
+
+[node name="MainMenuButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2134054824]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Menu"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2048973575]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quitter"
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=691283689]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 42.0
+offset_bottom = 77.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("4_font")
+bbcode_enabled = true
+text = "[center][font_size=35][outline_size=12][outline_color=#08080c][shake rate=12.0 level=8 connected=0][color=#e11d48]DEFAITE[/color][/shake][/outline_color][/outline_size][/font_size][/center]"

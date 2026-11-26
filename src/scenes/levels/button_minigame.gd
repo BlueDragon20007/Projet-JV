@@ -6,7 +6,7 @@ extends Node2D
 
 var end_position := 110.0
 
-var max_shake := 0.5
+var max_shake := 0.6
 
 func _ready() -> void:
 	pass

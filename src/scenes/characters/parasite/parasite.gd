@@ -75,3 +75,6 @@ func _interacted(interactable):
 			current_host = interactable.get_parent()
 			sprite.visible = false
 			collision_shape.set_deferred("disabled", true)
+
+func die() -> void:
+	get_tree().reload_current_scene()
